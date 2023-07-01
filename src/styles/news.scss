@@ -35,6 +35,10 @@
         padding: 20px;
         background-color: transparent;
 
+        &.invalido {
+          border: 2px solid #fff;
+        }
+
         &::placeholder {
           color: #000;
           text-transform: uppercase;
@@ -53,6 +57,9 @@
 
         &:hover {
           color: #1c1c1c;
+        }
+        &.invalido {
+          border: 2px solid #fff;
         }
       }
     }
