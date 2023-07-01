@@ -9,8 +9,63 @@
 </head>
 
 <body>
-  <img src="./images/background.jpg" alt="tubarão">
-
+  <main>
+    <section class="hero">
+      <div class="hero__info">
+        <span class="hero__info__text">E ae, vai dar mole?</span>
+        <h1 class="hero__info__title"> Melhor aniversário de <br> todos os tempos</h1>
+        <p class="hero__info__info">Janeiro 29/01/2024 | Maracanã | Rio De Janeiro</p>
+        <a href="#evento" class="hero__info__button">SAIBA MAIS</a>
+        <ul class="hero__info__contagem">
+          <li>
+            <b class="hero__info__contagem__data" id="dia"></b>
+            Dias
+          </li>
+          <li>
+            <b class="hero__info__contagem__data" id="horas"></b>
+            Horas
+          </li>
+          <li>
+            <b class="hero__info__contagem__data" id="minutos"></b>
+            Minutos
+          </li>
+          <li>
+            <b class="hero__info__contagem__data" id="segundos"></b>
+            Segundos
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="evento" id="evento">
+      <div class="evento__container">
+        <div class="caixa">
+          <span></span>
+          <img src="./images/dj-1.jpg" alt="dj">
+        </div>
+        <div class="evento__container__info">
+          <span class="evento__container__info__span">[ SOBRE ]</span>
+          <h2 class="evento__container__info__title">O que terá de especial?</h2>
+          <p class="evento__container__info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni unde neque nemo eveniet ex culpa porro? Accusamus blanditiis beatae veritatis, repudiandae ea earum obcaecati rem natus incidunt quam fugiat deleniti.</p>
+          <a href="#news" class="evento__container__info__button">INSCREVA-SE </a>
+        </div>
+      </div>
+    </section>
+    <section class="news" id="news">
+      <div class="news__container">
+        <div>
+          <h2 class="news__container__title">Inscreva-se</h2>
+          <p>assine e fique por dentro das novidades</p>
+        </div>
+        <form>
+          <input type="email" name="email" id="email" placeholder="Digite o seu e-mail">
+          <button type="submit">ENVIAR</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p> © Todos os direitos reservados.</p>
+  </footer>
   <script src="./scripts/script.js"></script>
 </body>
 

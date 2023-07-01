@@ -1,0 +1,129 @@
+@use "./variaveis.scss";
+@use "./evento.scss";
+.hero {
+  height: 100vh;
+  background-image: url("../images/background-principal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+  }
+
+  &__info {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    position: relative;
+    gap: 30px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    @media (max-width: 1000px) {
+      gap: 20px;
+    }
+
+    &__text {
+      font-size: 2rem;
+      color: variaveis.$corTitle;
+      font-family: "Monoton";
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: bold;
+      @media (max-width: 1000px) {
+        font-size: 1.8rem;
+      }
+      @media (max-width: 800px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__title {
+      font-family: "Monoton", sans-serif;
+      font-size: 3.5rem;
+      color: variaveis.$corTitle;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 400;
+      @media (max-width: 1000px) {
+        font-size: 2.8rem;
+      }
+      @media (max-width: 800px) {
+        font-size: 2rem;
+      }
+      @media (max-width: 400px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__info {
+      font-size: 1rem;
+      color: variaveis.$corTitle;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &__button {
+      padding: 15px 40px;
+      background-image: linear-gradient(
+        to left,
+        variaveis.$corButton1,
+        variaveis.$corButton2
+      );
+      color: variaveis.$corTitle;
+      font-family: sans-serif;
+      font-weight: bold;
+      letter-spacing: 4px;
+      border: 2px solid variaveis.$corTitle;
+      border-radius: 4px;
+
+      &:hover {
+        background-image: linear-gradient(
+          to left,
+          variaveis.$corButton2,
+          variaveis.$corButton1
+        );
+      }
+    }
+    &__contador {
+      font-size: 3rem;
+      color: variaveis.$corTitle;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+    &__contagem {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      color: variaveis.$corTitle;
+      font-family: sans-serif;
+      font-size: 1rem;
+      &__data {
+        display: block;
+        font-family: "Monoton";
+        color: variaveis.$corTitle;
+        font-size: 4rem;
+        letter-spacing: 4px;
+        font-weight: bold;
+        @media (max-width: 800px) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
